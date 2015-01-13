@@ -11,10 +11,14 @@ $('#submit').click(function (event) {
     if (url.indexOf('://') > -1) {
       parser = document.createElement('a');
       parser.href = url;
-      [username, reponame] = parser.pathname.split('/').filter(function (n) {return n}).slice(0, 2);
+      username_reponame = parser.pathname.split('/').filter(function (n) {return n}).slice(0, 2);
+      username = username_reponame[0];
+      reponame = username_reponame[1];
     }
     else {
-      [username, reponame] = url.split('/').slice(0, 2);
+      username_reponame = url.split('/').slice(0, 2);
+      username = username_reponame[0];
+      reponame = username_reponame[1];
     }
 
     client = Octokat({});
