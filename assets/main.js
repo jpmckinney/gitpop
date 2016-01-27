@@ -48,7 +48,7 @@ $('#submit').click(function (event) {
             '<tr>' +
               '<td><a href="' + href + '">' + repo.fullName.split('/')[0] + '</a></td>' +
               '<td>' + repo.stargazersCount + '</td>' +
-              '<td>' + repo.watchersCount + '</td>' +
+              '<td>' + repo.subscribersCount + '</td>' +
               '<td>' + repo.forksCount + '</td>' +
               '<td>' + repo.openIssuesCount + '</td>' +
               '<td>' + moment(repo.updatedAt).format('YYYY-MM-DD') + '</td>' +
